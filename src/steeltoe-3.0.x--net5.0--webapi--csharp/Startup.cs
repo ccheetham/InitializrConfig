@@ -84,6 +84,8 @@ namespace {{Namespace}}
 {{/mysql}}
 {{#actuator}}
 {{#cloud-foundry}}
+            services.ConfigureCloudFoundryOptions(Configuration);
+            
             services.AddCloudFoundryActuators(Configuration);
 {{/cloud-foundry}}
 {{^cloud-foundry}}

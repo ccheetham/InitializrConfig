@@ -35,6 +35,7 @@ using Steeltoe.Discovery.Client;
 {{/eureka-client}}
 {{#actuator}}
 {{#cloud-foundry}}
+using Steeltoe.Extensions.Configuration.CloudFoundry;
 using Steeltoe.Management.CloudFoundry;
 {{/cloud-foundry}}
 {{^cloud-foundry}}
@@ -84,6 +85,8 @@ namespace {{Namespace}}
 {{/mysql}}
 {{#actuator}}
 {{#cloud-foundry}}
+            services.ConfigureCloudFoundryOptions(Configuration);
+
             services.AddCloudFoundryActuators(Configuration);
 {{/cloud-foundry}}
 {{^cloud-foundry}}
