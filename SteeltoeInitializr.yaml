@@ -11,8 +11,6 @@ steeltoeVersion:
   type: single-select
   default: 3.0.2
   values:
-  - id: 4.0.0
-    name: Steeltoe 4.0.0
   - id: 3.1.0
     name: Steeltoe 3.1.0
   - id: 3.0.2
